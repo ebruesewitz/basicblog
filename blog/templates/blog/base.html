@@ -1,0 +1,19 @@
+<!-- base template to be applied to all pages. -->
+{% load staticfiles %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <title>Basic Blog</title>
+    </head>
+    <body>
+        <h1><a href="{% url 'post_list' %}">Basic Blog</a></h1>
+        <div id="rest">
+            {% block content %}
+            {%endblock %}
+        </div>
+    </body>
+
+</html>
